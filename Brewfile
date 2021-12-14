@@ -1,6 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/cask-fonts"
+
+
 
 # Developerstuffs
 # Dependency manager for Cocoa projects
@@ -29,3 +32,6 @@ brew "spotify"
 
 # Browsers
 brew "google-chrome"
+
+# Fonts
+brew "font-victor-mono-nerd-font"
