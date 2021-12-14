@@ -1,5 +1,5 @@
 - Install xcode
   - `xcode-select --install`
 - Clone gitrepo
-  - `git@github.com:bananashell/dotfiles.git ~/.dotfiles`
+  - `git clone git@github.com:bananashell/dotfiles.git ~/.dotfiles`
 - Run bootstrap.sh
