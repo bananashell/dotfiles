@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-xcode-select --install
-
-git clone git@github.com/bananashell/dotfiles.git ~/.dotfiles
-
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/config.fish ~/.config/fish/config.fish

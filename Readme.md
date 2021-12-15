@@ -1,3 +1,7 @@
+# Readme
+
+Hopefully an easy way to setup a new macbook 👍🏼 💻
+
 - Install xcode
   - `xcode-select --install`
 - Clone gitrepo
