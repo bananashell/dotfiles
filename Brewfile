@@ -10,6 +10,7 @@ tap "homebrew/cask-fonts"
 brew "cocoapods"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+brew "fisher"
 # Distributed revision control system
 brew "git"
 # Internet file retriever
@@ -34,4 +35,5 @@ brew "spotify"
 brew "google-chrome"
 
 # Fonts
-brew "font-victor-mono-nerd-font"
+cask "font-victor-mono-nerd-font"
+cask "font-hasklug-nerd-font"

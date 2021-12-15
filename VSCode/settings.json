@@ -1,0 +1,74 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "editor.fontFamily": "'Cartograph CF', monospace",
+  "editor.fontLigatures": true,
+
+  "editor.renderControlCharacters": false,
+  "git.autofetch": true,
+  "workbench.iconTheme": "material-icon-theme",
+
+  "editor.suggest.localityBonus": true,
+  "editor.fontWeight": "400",
+  "liveshare.presence": true,
+  "peacock.vslsShareColor": "#1857a4",
+  "peacock.vslsJoinColor": "#61dafb",
+  "terminal.integrated.profiles.osx": {
+    "bash": null,
+    "pwsh": null,
+    "zsh": null
+  },
+  "terminal.integrated.fontFamily": "Hasklug Nerd Font",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "remote.extensionKind": {
+    "ms-azuretools.vscode-docker": "workspace"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "debug.console.fontFamily": "Cartograph CF, monospace",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "workbench.list.smoothScrolling": true,
+  "remote.containers.workspaceMountConsistency": "delegated",
+  "scm.inputFontFamily": "editor",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "editor.minimap.maxColumn": 70,
+  "editor.minimap.renderCharacters": false,
+  "editor.linkedEditing": true,
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.enableBell": true,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.enableEditorConfigSupport": true,
+  "window.zoomLevel": 1,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "rest-client.followredirect": false,
+  "editor.quickSuggestionsDelay": 0,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[csharp]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
