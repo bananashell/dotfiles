@@ -70,5 +70,10 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSurroundingLines": 2,
+  "editor.cursorWidth": 3,
+  "terminal.integrated.cursorBlinking": true
 }
