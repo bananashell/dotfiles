@@ -5,6 +5,7 @@ git clone git@github.com/bananashell/dotfiles.git ~/.dotfiles
 
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/config.fish ~/.config/fish/config.fish
 
 #install homebrew
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
