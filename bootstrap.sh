@@ -3,12 +3,15 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/config.fish ~/.config/fish/config.fish
 
-#install homebrew
+# install homebrew
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 
 cd ~/.dotfiles && brew bundle
 
-#VSCode
+# fish setup
+fisher install IlanCosman/tide@v5
+
+# VSCode
 
 ln -s ~/.dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.dotfiles/VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
