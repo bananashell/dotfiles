@@ -1,46 +1,43 @@
-export PATH=/opt/homebrew/bin:~/.dotnet/tools:$PATH
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-eval "$(starship init zsh)"
+export PATH="/Users/bananashell/.bun/bin:$PATH"
+export PATH="$PATH:/Users/bananashell/.dotnet/tools"
 
-alias localcode="cd ~/localcode"
-alias stardaw="cd ~/localcode/starmony/stardaw"
+export GITHUB_NPM_TOKEN="INSERT TOKEN HERE"
+
 alias gs="git status"
-alias ll="exa --icons --all --tree --level=1 --git-ignore --group-directories-first $argv"
-alias ld="exa --icons --tree --level=2 --all --git-ignore --group-directories-first $argv"
-alias cd..="cd .."
-alias pr="open https://dev.azure.com/starmony/TakeOff/_git/StarDaw/pullrequests"
-alias k9s-dev="k9s --context instinctive-thaleia-dev"
-alias k9s-prod="k9s --context unsuitable-dike-prod"
-alias k9s-prod-2="k9s --context instinctive-thaleia-prod"
-alias pn="pnpm"
+alias c="code"
+alias localcode="cd ~/localcode"
 
-gitp() {
+function gitp {
+    status_output=$(git status 2>&1)
+    if [[ $? -ne 0 ]]; then
+        echo "Not a git repository"
+        return 1
+    fi
+
     echo Deleting dead branches
-    git checkout master
+    if git show-ref --quiet refs/remotes/origin/master; then
+      git checkout master
+    elif git show-ref --quiet refs/remotes/origin/main; then
+      git checkout main
+    else
+      echo "No master or main branch found"
+      return 1
+    fi
     git pull
     git fetch -p
-    git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d
+    git branch --merged | egrep -v "(^\*|master|main|develop)" | xargs git branch -d
     git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d
 }
 
-sln() {
-    dotnet new sln
-    dotnet sln add $(ls -r **/*.csproj)
-}
+alias ld="eza -lD"
+alias lf="eza -lf --color=always | grep -v /"
+alias lh="eza -dl .* --group-directories-first"
+alias ll="eza --all --tree --level=1 --group-directories-first"
+alias ls="eza --all --tree --level=1 --group-directories-first --git-ignore"
+alias lt="eza -al --sort=modified"
 
-keyvault() {
-  name=$1
-  vault=star-deploy-keys-dev
-
-  if [ $2 = "--prod" ]; then
-    vault=star-deploy-keys-prod
-  fi
-
-  echo Fetching $name from $vault
-  az keyvault secret show --name $name --vault-name $vault | jq '.value'
-}
-
-eval $(thefuck --alias)
+alias myip="curl ifconfig.me | pbcopy"

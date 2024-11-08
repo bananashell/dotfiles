@@ -2,20 +2,26 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/cask-fonts"
-
-
+tap "FelixKratz/formulae"
 
 # Developerstuffs
-# Dependency manager for Cocoa projects
 brew "cocoapods"
-# User-friendly command-line shell for UNIX-like operating systems
-brew "fish"
-brew "fisher"
-# Distributed revision control system
 brew "git"
-# Internet file retriever
 brew "wget"
-# JavaScript package manager
+
+brew "bat"
+
+
+cask "raycast"
+cask "warp"
+cask "font-hack-nerd-font"
+cask "amethyst"
+cask "numi"
+cask "sf-symbols"
+brew "eza"
+brew "sketchybar"
+
+brew "bun"
 brew "yarn"
 brew "jq"
 brew "docker"
@@ -25,14 +31,15 @@ brew "nvm"
 cask "beardedspice"
 brew "slack"
 brew "visual-studio-code"
-# Magnet
-mas install 441258766
+
+mas install 441258766 # Magnet
+
 # Spotify
 brew "spotify"
 
-
 # Browsers
 brew "google-chrome"
+cask "arc"
 
 # Fonts
 cask "font-victor-mono-nerd-font"
